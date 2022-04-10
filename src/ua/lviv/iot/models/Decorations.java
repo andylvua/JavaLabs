@@ -1,7 +1,7 @@
 package ua.lviv.iot.models;
 
 public class Decorations extends Equipment {
-	String filmGenre;
+	private final String filmGenre;
 
 	public Decorations(String manufacturer, boolean isRented, float priceInUAH, String filmGenre) {
 		super(manufacturer, isRented, priceInUAH);

@@ -1,9 +1,9 @@
 package ua.lviv.iot.models;
 
 public class Equipment {
-	String manufacturer;
-	boolean isRented;
-	float priceInUAH;
+	protected final String manufacturer;
+	protected final boolean isRented;
+	protected final float priceInUAH;
 
 	public String getManufacturer() {
 		return manufacturer;
