@@ -7,7 +7,6 @@ public record EquipmentBox(Equipment equipment, int numberOfItems, int weightInK
 				"Type of equipment = " + typeOfEquipment +
 				", Number of items: " + numberOfItems +
 				", Weight KG: " + weightInKg +
-
 				']';
 	}
 }

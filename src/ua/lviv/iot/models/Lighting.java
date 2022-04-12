@@ -1,9 +1,9 @@
 package ua.lviv.iot.models;
 
 public class Lighting extends Equipment {
-	int watts;
-	int kelvins;
-	String model;
+	private final int watts;
+	private final int kelvins;
+	private final String model;
 
 	public Lighting(String manufacturer, boolean isRented, float priceInUAH, int watts, int kelvins, String model) {
 		super(manufacturer, isRented, priceInUAH);

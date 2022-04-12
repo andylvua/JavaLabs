@@ -1,8 +1,8 @@
 package ua.lviv.iot.models;
 
 public class Camera extends Equipment {
-	String model;
-	int megapixels;
+	private final String model;
+	private final int megapixels;
 
 	public Camera(String manufacturer, boolean isRented, float priceInUAH, String model, int megapixels) {
 		super(manufacturer, isRented, priceInUAH);

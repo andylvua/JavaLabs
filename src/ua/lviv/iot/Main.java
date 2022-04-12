@@ -4,11 +4,10 @@ import ua.lviv.iot.manager.*;
 import ua.lviv.iot.models.*;
 
 public class Main {
-
-	static final String SPLITTER = "----------------------------------------------------------";
-	static final String TAB = "\t\t\t\t\t\u00A0\u00A0";
-
 	public static void main(String[] args) {
+		final String SPLITTER = "----------------------------------------------------------";
+		final String TAB = "\t\t\t\t\t\u00A0\u00A0";
+
 		EquipmentBox equipmentBox = new EquipmentBox(new Camera("Sony Corporation Japan",
 				false, 70499, "Alpha a7",
 				24),10,14,"Cameras");
@@ -22,9 +21,7 @@ public class Main {
 				true, 45000, "Historical"),
 				2,560,"Decorations");
 
-
 		FilmStudio marvelStudios = new FilmStudio();
-
 
 		marvelStudios.addNewEquipment(equipmentBox,equipmentBox1,equipmentBox2, equipmentBox3);
 		System.out.println(TAB + "--------------");
