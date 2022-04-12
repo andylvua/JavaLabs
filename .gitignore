@@ -17,5 +17,5 @@
 
 # (andylvua)
 .idea/
-*.xml
+/target/
 *.iml
