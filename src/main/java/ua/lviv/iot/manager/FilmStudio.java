@@ -1,6 +1,5 @@
 package ua.lviv.iot.manager;
 
-import org.jetbrains.annotations.NotNull;
 import ua.lviv.iot.models.Decorations;
 import ua.lviv.iot.models.Equipment;
 import ua.lviv.iot.models.EquipmentBox;
@@ -11,7 +10,7 @@ import java.util.stream.Collectors;
 public class FilmStudio {
 	List<Equipment> equipmentList = new ArrayList<>();
 
-	public void addNewEquipment(EquipmentBox @NotNull ... equipmentBoxes){
+	public void addNewEquipment(EquipmentBox ... equipmentBoxes){
 		for (EquipmentBox equipmentBox : equipmentBoxes) {
 			for(int i = 0; i < equipmentBox.numberOfItems(); ++i)
 				equipmentList.add(equipmentBox.equipment());
