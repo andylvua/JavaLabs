@@ -8,6 +8,7 @@ on:
     branches: [ Lab_5 ]
   pull_request:
     branches: [ Lab_5 ]
+    types: [opened]
 
 jobs:
   build:
