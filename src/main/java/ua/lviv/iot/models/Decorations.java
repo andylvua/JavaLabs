@@ -1,5 +1,7 @@
 package ua.lviv.iot.models;
 
+import java.util.Objects;
+
 public class Decorations extends Equipment {
 	private final String filmGenre;
 
@@ -13,6 +15,16 @@ public class Decorations extends Equipment {
 	}
 
 	@Override
+	public String toCSV() {
+		return "Decorations" + "," + super.toCSV() + "," + filmGenre;
+	}
+
+	@Override
+	public String getHeaders() {
+		return "Type" + "," + super.getHeaders() + "," + "FilmGenre";
+	}
+
+	@Override
 	public String toString() {
 		return "Decorations    [" +
 				"Manufacturer: " + manufacturer +
@@ -20,5 +32,19 @@ public class Decorations extends Equipment {
 				", priceInUAH = " + priceInUAH +
 				", filmGenre: " + filmGenre +
 				']';
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		if (!super.equals(o)) return false;
+		Decorations that = (Decorations) o;
+		return Objects.equals(filmGenre, that.filmGenre);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(super.hashCode(), filmGenre);
 	}
 }

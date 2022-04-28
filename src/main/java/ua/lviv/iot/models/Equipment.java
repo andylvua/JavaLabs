@@ -25,6 +25,14 @@ public class Equipment {
 		this.priceInUAH = priceInUAH;
 	}
 
+	public String toCSV() {
+		return manufacturer + "," + isRented + "," + priceInUAH;
+	}
+
+	public String getHeaders() {
+		return "Manufacturer,IsRented,PriceInUAH";
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;

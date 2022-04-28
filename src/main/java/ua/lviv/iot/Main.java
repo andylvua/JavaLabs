@@ -5,8 +5,8 @@ import ua.lviv.iot.models.*;
 
 public class Main {
 	public static void main(String[] args) {
-		final String SPLITTER = "----------------------------------------------------------";
-		final String TAB = "\t\t\t\t\t\u00A0\u00A0";
+		final String splitter = "----------------------------------------------------------";
+		final String tab = "\t\t\t\t\t\u00A0\u00A0";
 
 		EquipmentBox equipmentBox = new EquipmentBox(new Camera("Sony Corporation Japan",
 				false, 70499, "Alpha a7",
@@ -23,33 +23,33 @@ public class Main {
 
 		FilmStudio marvelStudios = new FilmStudio();
 
-		marvelStudios.addNewEquipment(equipmentBox,equipmentBox1,equipmentBox2, equipmentBox3);
-		System.out.println(TAB + "--------------");
-		System.out.println("\033[0;1m" + TAB + "Marvel Studios" + "\033[0;0m");
-		System.out.println(TAB + "--------------");
+		marvelStudios.addNewEquipment(equipmentBox, equipmentBox1, equipmentBox2, equipmentBox3);
+		System.out.println(tab + "--------------");
+		System.out.println("\033[0;1m" + tab + "Marvel Studios" + "\033[0;0m");
+		System.out.println(tab + "--------------");
 		System.out.println();
 		System.out.println("-------------------- List of equipment -------------------");
 		marvelStudios.printEquipment();
-		System.out.println(SPLITTER);
+		System.out.println(splitter);
 		System.out.println();
 		System.out.println();
 		System.out.println("-------------------- Rented equipment --------------------");
 		marvelStudios.getRentedEquipment().forEach(System.out::println);
-		System.out.println(SPLITTER);
+		System.out.println(splitter);
 		System.out.println();
 		System.out.println();
 		System.out.println("---------------- Equipment sorted by price ---------------");
 		marvelStudios.getEquipmentSortedByPrice(false).forEach(System.out::println);
-		System.out.println(SPLITTER);
+		System.out.println(splitter);
 		System.out.println();
 		System.out.println();
 		System.out.println("------------ Equipment sorted by manufacturer ------------");
 		marvelStudios.getEquipmentSortedByManufacturer(false).forEach(System.out::println);
-		System.out.println(SPLITTER);
+		System.out.println(splitter);
 		System.out.println();
 		System.out.println();
 		System.out.println("------------- Decorations for historical film ------------");
 		marvelStudios.getDecorationsByGenre("historical").forEach(System.out::println);
-		System.out.println(SPLITTER);
+		System.out.println(splitter);
 	}
 }
