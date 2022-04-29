@@ -1,3 +1,4 @@
+[![Java CI with Maven](https://github.com/andylvua/JavaLabs/actions/workflows/maven.yml/badge.svg)](https://github.com/andylvua/JavaLabs/actions/workflows/maven.yml)
 # Лабораторна робота 2
 ## Опис завдання
 1. Реалізувати ієрархію класів до завдання з лабораторної №2 (секція Зимова школа)
