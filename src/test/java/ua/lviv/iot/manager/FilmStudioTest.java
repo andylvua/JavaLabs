@@ -1,18 +1,19 @@
 package ua.lviv.iot.manager;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
 import ua.lviv.iot.models.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class FilmStudioTest {
-	static FilmStudio studio = new FilmStudio();
+	static final FilmStudio STUDIO = new FilmStudio();
 
 	@BeforeAll
 	static void addEquipment() {
@@ -29,7 +30,7 @@ class FilmStudioTest {
 				true, 45000, "Historical"),
 				1,560,"Decorations");
 
-		studio.addNewEquipment(equipmentBox, equipmentBox1, equipmentBox2, equipmentBox3);
+		STUDIO.addNewEquipment(equipmentBox, equipmentBox1, equipmentBox2, equipmentBox3);
 	}
 
 	@Test
@@ -44,7 +45,7 @@ class FilmStudioTest {
 				new Decorations("China Decorations LTD.",
 						true, 45000, "Historical")
 		));
-		List<Equipment> actual = studio.equipmentList;
+		List<Equipment> actual = STUDIO.equipmentList;
 
 		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
@@ -59,10 +60,10 @@ class FilmStudioTest {
 				""";
 
 		ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-		System.setOut(new PrintStream(outContent));
-		studio.printEquipment();
+		System.setOut(new PrintStream(outContent, true, StandardCharsets.UTF_8));
+		STUDIO.printEquipment();
 
-		assertEquals(expected, outContent.toString());
+		assertEquals(expected, outContent.toString(StandardCharsets.UTF_8));
 	}
 
 	@Test
@@ -77,7 +78,7 @@ class FilmStudioTest {
 				new Lighting("Nanlite USA",
 						true,20,50,4500, "Forza 60")
 		));
-		Set<Equipment> actual = studio.getEquipmentSortedByPrice(true);
+		Set<Equipment> actual = STUDIO.getEquipmentSortedByPrice(true);
 
 		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
@@ -94,7 +95,7 @@ class FilmStudioTest {
 				new Camera("Sony Corporation Japan",
 						false, 70499, "Alpha a7", 24)
 		));
-		Set<Equipment> actual = studio.getEquipmentSortedByPrice(false);
+		Set<Equipment> actual = STUDIO.getEquipmentSortedByPrice(false);
 
 		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
@@ -107,7 +108,7 @@ class FilmStudioTest {
 				new Decorations("China Decorations LTD.",
 						true, 45000, "Historical")
 		));
-		Set<Equipment> actual = studio.getRentedEquipment();
+		Set<Equipment> actual = STUDIO.getRentedEquipment();
 
 		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
@@ -118,7 +119,7 @@ class FilmStudioTest {
 				new Decorations("China Decorations LTD.",
 						true, 45000, "Historical")
 		));
-		Set<Decorations> actual = studio.getDecorationsByGenre("historical");
+		Set<Decorations> actual = STUDIO.getDecorationsByGenre("historical");
 
 		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
@@ -135,7 +136,7 @@ class FilmStudioTest {
 				new Camera("Canon Inc. Japan",
 						false, 200, "FZ-1000", 28)
 		));
-		Set<Equipment> actual = studio.getEquipmentSortedByManufacturer(true);
+		Set<Equipment> actual = STUDIO.getEquipmentSortedByManufacturer(true);
 
 		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
@@ -152,7 +153,7 @@ class FilmStudioTest {
 				new Camera("Sony Corporation Japan",
 						false, 70499, "Alpha a7", 24)
 		));
-		Set<Equipment> actual = studio.getEquipmentSortedByManufacturer(false);
+		Set<Equipment> actual = STUDIO.getEquipmentSortedByManufacturer(false);
 
 		assertArrayEquals(expected.toArray(), actual.toArray());
 	}

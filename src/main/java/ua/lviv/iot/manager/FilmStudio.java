@@ -8,12 +8,13 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class FilmStudio {
-	List<Equipment> equipmentList = new ArrayList<>();
+	final List<Equipment> equipmentList = new ArrayList<>();
 
-	public void addNewEquipment(EquipmentBox ... equipmentBoxes){
+	public void addNewEquipment(EquipmentBox... equipmentBoxes) {
 		for (EquipmentBox equipmentBox : equipmentBoxes) {
-			for(int i = 0; i < equipmentBox.numberOfItems(); ++i)
+			for (int i = 0; i < equipmentBox.numberOfItems(); ++i) {
 				equipmentList.add(equipmentBox.equipment());
+			}
 		}
 	}
 
@@ -24,10 +25,10 @@ public class FilmStudio {
 		}
 	}
 
-	public Set<Equipment> getEquipmentSortedByPrice(boolean reverse){
+	public Set<Equipment> getEquipmentSortedByPrice(boolean reverse) {
 		Set<Equipment> result = equipmentList.stream().sorted(Comparator.comparingDouble(Equipment::getPriceInUAH))
 				.collect(Collectors.toCollection(LinkedHashSet::new));
-		if(reverse) {
+		if (reverse) {
 			List<Equipment> list = new ArrayList<>(result);
 			Collections.reverse(list);
 			result = new LinkedHashSet<>(list);
@@ -35,11 +36,11 @@ public class FilmStudio {
 		return result;
 	}
 
-	public Set<Equipment> getRentedEquipment(){
+	public Set<Equipment> getRentedEquipment() {
 		return equipmentList.stream().filter(Equipment::isRented).collect(Collectors.toSet());
 	}
 
-	public Set<Decorations> getDecorationsByGenre(String genre){
+	public Set<Decorations> getDecorationsByGenre(String genre) {
 		Set<Decorations> result = new HashSet<>();
 		equipmentList.stream().filter(item -> item.getClass().getTypeName().equals("ua.lviv.iot.models.Decorations"))
 				.filter(decoration -> ((Decorations)decoration).getFilmGenre().equals(genre.toLowerCase()))
@@ -47,10 +48,10 @@ public class FilmStudio {
 		return result;
 	}
 
-	public Set<Equipment> getEquipmentSortedByManufacturer(boolean reverse){
+	public Set<Equipment> getEquipmentSortedByManufacturer(boolean reverse) {
 		Set<Equipment> result = equipmentList.stream().sorted(Comparator.comparing(Equipment::getManufacturer))
 				.collect(Collectors.toCollection(LinkedHashSet::new));
-		if(reverse) {
+		if (reverse) {
 			List<Equipment> list = new ArrayList<>(result);
 			Collections.reverse(list);
 			result = new LinkedHashSet<>(list);
