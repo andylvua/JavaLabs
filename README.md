@@ -72,7 +72,7 @@ mvn archetype:generate
 * How to add a new dependency in pom.xml?
 * How Maven dispatches dependencies?
 
-#Laboratory work 5
+# Laboratory work 5
 ## Task description
 In laboratory work №5 you have to write unit tests for the code of laboratory work №4
 and reach a test coverage level of 80%.
@@ -83,7 +83,7 @@ The way to avoid this problem is the **TDD** approach.
 
 For this laboratory compromise value will be coverage of 80%
 
-#Laboratory work 6
+# Laboratory work 6
 ## Task description
 This work is devoted to work with files and write operations, and is also based on
 laboratory works 3, 5-6. For the implemented hierarchy of classes in the 3rd laboratory work you should implement
