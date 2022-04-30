@@ -1,41 +1,41 @@
 [![Java CI with Maven](https://github.com/andylvua/JavaLabs/actions/workflows/maven.yml/badge.svg)](https://github.com/andylvua/JavaLabs/actions/workflows/maven.yml)
-# Лабораторна робота 2
-## Опис завдання
-1. Реалізувати ієрархію класів до завдання з лабораторної №2 (секція Зимова школа)
-2. При записі програми потрібно використовувати домовленості щодо оформлення коду java code convention.
-3. Класи потрібно грамотно розкласти по пакетах.
-4. Робота з консоллю або консольне меню повинні бути мінімальними.
-5. Важливо: необхідно реалізувати лише ієрархію класів, код пошуку елементів у списках чи колекціях не входить у 2-гу роботу
-6. Також слід створити обʼєкти реалізованих вами класів у окремому класі Main, який міститиме main метод
-7. Слід додати своє прізвище в таблицю до завдання 2 коло обраного варіанту (обирати слід самостійно)
-8. Якщо вільних варіантів в документі більше не буде - слід написати викладачу та отримати варіант від нього
+# Laboratory work 2
+## Task description
+1. Implement the hierarchy of classes for the task of laboratory №2 (section Winter School)
+2. When writing a program, you have to use the arrangements for the design of the java code convention.
+3. Classes need to be properly divided into packages.
+4. Work with the console or console menu should be minimal.
+5. Important: only the class hierarchy needs to be implemented, the code for searching for items in lists or collections is not included in the 2nd work
+6. You should also create objects of the classes you have implemented in a separate Main class, which will contain the main method
+7. It is necessary to add the surname in the table to the task 2 next to the chosen variant (it is necessary to choose independently)
+8. If there are no more free options left in the document - you should contact the teacher in order to get a variant
 
-# Лабораторна робота 3
-## Опис завдання
-1. Необхідно створити клас - Менеджер, що міститиме логіку (приклад для варіанту 1):
-> Реалізувати пошук товарів, котрі можна купити для дівчинки в осінній період та реалізувати можливість сортування знайдених товарів:
-> - за ціною
-> - за розмірами
+# Laboratory work 3
+## Task description
+1. Create a class - ```Manager```, which will contain program logic (example for option 1):
+> Implement a search for products that can be bought for a girl in the fall and implement the ability to sort the found products:
+> - by the price
+> - by the size
 > <!-- end -->
 > <br/>
-> Реалізація сортування має передбачати можливість сортувати як за спаданням, так і за зростанням.
+> The implementation of sorting should provide the ability to sort both in descending and ascending order.
 
 
 
-2. Для сортування слід використати вбудовані методи сортування, доступні в мові Java
-3. Сортування слід реалізувати в окремому методі
-4. Код немає містити статичних методів/атрибутів. Дозволено лише один статичний метод - void
-5. Код має використовувати перелічувальний тип (Enum) (за потреби)
+2. Use the built-in sorting methods available in Java
+3. Sorting should be implemented in a separate method
+4. The code should not contain static methods / attributes. Only one static method is allowed - void
+5. Code must use _enum_ type (if necessary)
 
-# Лабораторна робота 4
-## Опис завдання
-Перетворити проєкт з кодом 2-3 роботи таким чином, щоб його збірку можна було виконувати з-за допомоги maven.
+# Laboratory work 4
+## Task description
+Convert a project with work 2-3 code so its assembly can be performed with Maven.
 
-При цьому варто зробити команду merge попередніх робіт в master
+At the same time it's necessary to merge the previous works in master branch
 
-**Важливо**: збірку проєкту слід виконувати з консолі командою mvn clean package
+**Important**: The project build should be performed from the console with the ```mvn clean package``` command
 
-Згенерувати pom.xml можна з використанням команди maven (слід виконувати з консолі):
+You can generate pom.xml using the following maven command (run from the console):
 ``` java
 mvn archetype:generate 
 -DgroupId=ua.lviv.iot 
@@ -46,67 +46,66 @@ mvn archetype:generate
 -DinteractiveMode=false
 ```
 
-# Питання на захист
-* this keyword
-* super keyword
-* final keyword
-* Блоки ініціалізації
-* enum - why they are used? how they differ from final static fields?
+# Questions
+* This keyword
+* Super keyword
+* Final keyword
+* Initialization blocks
+* Enum - why are they used? How do they differ from final static fields?
 * Interface vs Abstract class
 * Inheritance in Java: extends, implements keywords
-* Make class abstract
-* Make method abstract in Java
-* Create interface in Java
-* how to make variable to be a constant
+* Make a class abstract
+* Make a method abstract in Java
+* Create an interface in Java
+* How to make a constant variable
 * Constructors vs initialization blocks
-* What is immutability?
+* What is immutability in Java?
 * Explain what is package in Java
-* What happens when the main() isn't declared as static?
-* What is the difference between JDK, JRE, and JVM?
+* What happens if main() is not declared as static?
+* Explain the difference between JDK, JRE, and JVM?
 * Can a constructor return a value?
 * Explain Method Overloading in Java. Provide an example based on your code
 * Can we overload a static method?
-* Why is the delete function faster in the linked list than an array?
+* Why is the delete function faster in the linked list than in an array?
 * What is pom.xml?
 * Explain pom.xml sections
-* How to add new dependency in pom.xml?
-* How maven dispatches dependencies?
+* How to add a new dependency in pom.xml?
+* How Maven dispatches dependencies?
 
-# Лабораторна робота 5
-## Опис завдання
-В 5 лабораторній роботі слід написати модульні тести для коду лабораторної роботи №4
-і досягти рівня покриття тестами 80%.
+#Laboratory work 5
+## Task description
+In laboratory work №5 you have to write unit tests for the code of laboratory work №4
+and reach a test coverage level of 80%.
 
-Очевидно, що ідеалом є покриття на рівні 100% (тобто кожна лінія коду покрита тестами). </br>
-Також очевидно, що написання тестів потребує значну кількість часу, якого завжди бракує. <br>
-Одним з варіантів уникнення цієї проблеми є підхід TDD.
+Obviously, the perfect coverage is 100% (ie each line of code is covered by tests). </br>
+It is also obvious that writing tests takes a considerable amount of time, which is always lacking. <br>
+The way to avoid this problem is the **TDD** approach.
 
-Для даної лабораторної компромісним значенням буде покриття тестами на рівні 80%
+For this laboratory compromise value will be coverage of 80%
 
-# Лабораторна робота 6
-## Опис завдання
-Дана робота присвячена роботі з файлами й операції запису, і також базується на основі
-лабораторних 3, 5-6. Для реалізованої ієрархії класів в 3-й лабораторній слід реалізувати
-запис списку обʼєктів, які присутні в менеджері, в CSV-файл. Звертаю увагу, що код слід
-реалізувати лише після здачі 3, 5-6 лабораторних (здаються окремо, при спробі здачі
-всіх робіт одночасно студент отримає доповнення до його задачі 3).
+#Laboratory work 6
+## Task description
+This work is devoted to work with files and write operations, and is also based on
+laboratory works 3, 5-6. For the implemented hierarchy of classes in the 3rd laboratory work you should implement
+a writing to a CSV file function that uses a list of objects present in the manager. Please note, that the code should be
+done only after 3, 5-6 laboratory works.
 
-Нехай в рамках лабораторної 3 було реалізовано клас CrocodileManager,
-який містить список обʼєктів, похідних від класу Crocodile. Для кожного класу,
-похідного від Crocodile і в самому класі Crocodile слід реалізувати два методи:
+Let the ```CrocodileManager``` class be implemented in laboratory work 3,
+which contains a list of objects derived from the ```Crocodile``` class. For each class,
+derived from ```Crocodile``` and in the class ```Crocodile``` you have to implement two methods:
 
 ``` java
 pubic String getHeaders() { ... }
 ```
-> Повертає стрічку з атрибутів, присутніх в даному класі, розділеному через кому
+> Returns a string of the attributes present in this class, separated by commas
 ``` java
 pubic String toCSV() { ... }
 ```
-> Повертає значення атрибутів (значення полів), даного об'єкта, розділеного комами
+> Returns the value of attributes (field values) of this object, separated by commas
 
-Реалізація методу toCSV в дочірніх класах має викликати також цей метод із батьківського класу.
-Поля, які оголошені в батьківському класі, мають конвертуватись в стрічку, розділену комами,
-в батьківському класі, наприклад:
+The implementation of the ```toCSV``` method in the child classes should also call this method from the parent class.
+Fields declared in the parent class must be converted to a comma-separated string,
+in the parent class, for example:
 
 ``` java
 class Crocodile {
@@ -124,14 +123,15 @@ private int maxSpeed;
 }
 ```
 
-Для реалізації запису у файл слід реалізувати окремий клас ```Writer```
-(наприклад - CrocodileWriter), який міститиме метод
-```public void writeToFile(List<Crocodile> crocodiles)```.
-Виклик даного методі слід реалізувати з тестів.
+You must implement a separate class ```Writer```
+(for example - CrocodileWriter), which will contain the method
+```public void writeToFile (List<Crocodile> crocodiles)```.
+Call of this method should be implemented from the tests.
 
-Код має відповідати **code convention**.
+The code must meet the **code convention** rules.
 
-Також, в **pom.xml** слід додати плагіни ```checkstyle``` і ```spotbugs``` та перевірити код цими аналізаторами
-Також слід виправити всі помилки, які будуть знайдені spotbugs та зменшити кількість помилок, на які вкаже checkstyle
+Also, in the **pom.xml** you should add ```checkstyle``` and ``` spotbugs``` plugins in order to check your code.
 
-Для перевірки якості коду слід виконати команду ```mvn clean site```
+You should also fix **any** errors that spotbugs will find and **reduce** the number of errors that checkstyle points out.
+
+To check the quality of the code, run the ```mvn clean site``` command
