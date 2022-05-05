@@ -35,7 +35,7 @@ class EquipmentWriterTest {
 		studio.addNewEquipment(equipmentBox, equipmentBox1, equipmentBox2, equipmentBox3);
 		EquipmentWriter.writeToCSVFile(studio.equipmentList);
 
-		File file = new File("result.csv");
+		File file = new File("src/test/resources/result.csv");
 		Scanner scanner = new Scanner(file, StandardCharsets.UTF_8);
 		StringBuilder result = new StringBuilder();
 		while (scanner.hasNextLine()){
@@ -63,7 +63,7 @@ class EquipmentWriterTest {
 		studio.addNewEquipment(equipmentBox);
 		EquipmentWriter.writeToCSVFile(studio.equipmentList);
 
-		File file = new File("result.csv");
+		File file = new File("src/test/resources/result.csv");
 		Scanner scanner = new Scanner(file, StandardCharsets.UTF_8);
 		StringBuilder result = new StringBuilder();
 		while (scanner.hasNextLine()){
@@ -79,7 +79,7 @@ class EquipmentWriterTest {
 	@Test
 	void testWriteToSCVFileEmptyCase() throws IOException {
 		EquipmentWriter.writeToCSVFile(new ArrayList<>());
-		File file = new File("result.csv");
+		File file = new File("src/test/resources/result.csv");
 		Scanner scanner = new Scanner(file, StandardCharsets.UTF_8);
 		StringBuilder result = new StringBuilder();
 		while (scanner.hasNextLine()) {

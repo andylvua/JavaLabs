@@ -19,4 +19,4 @@
 .idea/
 /target/
 *.iml
-result.csv
+/src/test/resources/result.csv
