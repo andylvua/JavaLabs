@@ -135,3 +135,11 @@ Also, in the **pom.xml** you should add ```checkstyle``` and ``` spotbugs``` plu
 You should also fix **any** errors that spotbugs will find and **reduce** the number of errors that checkstyle points out.
 
 To check the quality of the code, run the ```mvn clean site``` command
+
+# Laboratory work 7
+## Task description
+1. Write the code for the task from the table
+2. The code must comply with the java code convention.
+3. The code should be tested
+4. Any operations on the text should be done via objects (the use of static methods is prohibited)
+5. The code should receive the necessary parameters and return the expected results

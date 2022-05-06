@@ -14,7 +14,7 @@ public final class EquipmentWriter {
 	}
 
 	public static void writeToCSVFile(List<Equipment> equipmentBox) throws IOException {
-		File file = new File("result.csv");
+		File file = new File("src/test/resources/result.csv");
 		String separator = System.getProperty("line.separator");
 
 		try (FileWriter fileWriter = new FileWriter(file, StandardCharsets.UTF_8)) {
