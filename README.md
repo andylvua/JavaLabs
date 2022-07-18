@@ -1,3 +1,8 @@
+> **Note**
+> 
+> ## This is an archive repository
+</br>
+
 [![Java CI with Maven](https://github.com/andylvua/JavaLabs/actions/workflows/maven.yml/badge.svg)](https://github.com/andylvua/JavaLabs/actions/workflows/maven.yml)
 # Laboratory work 2
 ## Task description
